@@ -1,9 +1,17 @@
+
 package com.frwk.salesforce.integrator.dto;
 
+import com.fasterxml.jackson.annotation.*;
 import lombok.Data;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @Data
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class BrandMessage {
-    private Long id;
-    private String name;
+    @JsonProperty("payload")
+    private Payload payload;
+    @JsonIgnore
+    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 }
