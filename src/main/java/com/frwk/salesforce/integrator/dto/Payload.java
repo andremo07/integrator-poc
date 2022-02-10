@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -13,9 +14,9 @@ import java.util.Map;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Payload {
     @JsonProperty("before")
-    private Before before;
+    private DataInfo before;
     @JsonProperty("after")
-    private After after;
+    private DataInfo after;
     @JsonProperty("source")
     private Source source;
     @JsonProperty("op")

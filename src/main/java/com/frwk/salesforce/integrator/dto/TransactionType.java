@@ -14,7 +14,7 @@ public enum TransactionType {
 
     public static TransactionType lookup(String prefix) {
         for(TransactionType tt :TransactionType.values()){
-            if(tt.getPrefix().equals(prefix)) {
+            if(tt.getPrefix().equals(prefix.toUpperCase())) {
                 return tt;
             }
         }

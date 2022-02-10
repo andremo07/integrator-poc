@@ -1,15 +1,16 @@
 
 package com.frwk.salesforce.integrator.dto;
 
-import com.fasterxml.jackson.annotation.*;
-import lombok.Data;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.HashMap;
 import java.util.Map;
 
-@Data
+@lombok.Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class After {
+public class DataInfo {
     @JsonProperty("MARC_CD_MARCA")
     private Integer marcCdMarca;
     @JsonProperty("MARC_TX_DESCRICAO")

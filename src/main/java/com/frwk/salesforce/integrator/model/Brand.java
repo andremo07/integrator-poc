@@ -1,21 +1,16 @@
 package com.frwk.salesforce.integrator.model;
 
 import lombok.Data;
-
-import javax.persistence.*;
+import org.springframework.data.annotation.Id;
 
 @Data
-@Entity
-@Table(name="brand",  schema = "public")
 public class Brand {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    @Column(name="brand_id")
-    private Long brandId;
+    private String id;
+    private Integer brandId;
 
-    public static Brand prototype(Long brandId){
+    public static Brand prototype(Integer brandId){
         Brand brand = new Brand();
         brand.setBrandId(brandId);
         return brand;
